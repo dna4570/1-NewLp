@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title> 1-TokyoMetro | 旅行</title>
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normarize.css">
+  <link rel="stylesheet" href="./css/8-1-2.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" media="all">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="./js/layout.js">
+  <link rel="stylesheet" type="text/css" href="css/6-1-1.css">
+  <link rel="stylesheet" type="text/css" href="cdn.jsdeliver.net/npm/slick-carousel@1.8.1/slick/
+  slick.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./image/favicon.ico.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
+</head>
+<body>
+<!----------------------------------
+Ls-top__header
+------------------------------------>
+<div class="Ls-top__header">
+  <div class="Ls-top__header-flex">
+    <h1 style="vertical-align: top;">
+      <img src="./image/header_logo.png" alt="">
+    </h1>
+<!-- <nav id="g-navi"> -->
+				<nav>
+					<ul class="Ls-header__gnavi__lists" id="normal">
+						<li class="Ls-header__gnavi__list">
+							<a href="#">
+								<i class="far fa-list-alt fa-lg"></i>
+									TOPページ
+							</a>
+						</li>
+						<li class="Ls-header__gnavi__list">
+							<a href="#">
+								<i class="far fa-list-alt fa-lg"></i>
+									お知らせ
+							</a>
+						</li>
+						<li class="Ls-header__gnavi__list">
+							<a href="#">
+								<i class="far fa-list-alt fa-lg"></i>
+									ご利用シーン・事例
+							</a>
+						</li>
+					</ul>
+				</nav><!-- </nav> -->
+    <!-- <div class="openbtn1">
+			<a class="trigger" href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+    </div> -->
+        <div id="navArea">
+          <nav>
+            <div class="inner">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Detail</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div id="mask"></div>
+        </div>
+
+        <main>
+          <h1>Hamburger Menu Youtube</h1>
+        </main>
+	</div>
+</div>
+<!----------------------------------
+  container ヒーローイメージ
+------------------------------------>
+<div class="container">
+  <div class="container__inner slider"  >
+    <img src="./image/HERO.png">
+  </div>
+</div>
+
+<!----------------------------------
+  contact ヒーローイメージ
+------------------------------------>
+<div class="contact">
+  <div class="contact_inner">
+    <div id="map" style="width: 800px; height: 400px"></div>
+  </div>
+</div>
+
+<!----------------------------------
+Ls-test07-sec02 バナー3枚
+------------------------------------>
+<div class="Ls-test07-sec02">
+  <div class="Ls-test07-sec02__inner">
+    <div class="card1">
+      <img src="./image/info_g05.png" >
+        <p class="card_text" >
+          HTML5
+				</p>
+    </div>
+    <div class="card2">
+      <img src="./image/info_g05.png">
+        <p class="card_text">
+          CSS3
+				</p>
+    </div>
+    <div class="card3">
+      <img src="./image/info_g05.png">
+        <p class="card_text">
+          jQuery
+				</p>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------
+  container3 デザイナーが起こした
+------------------------------------>
+<div class="container3">
+  <div class="container3__inner">
+    <p class="Ls-test07-sec02__text">
+      デザイナーが起こしたデザインからコーディングを担当しHTML/CSS/jQuery・Photoshopを使いWebサイトをレスポンシブ対応のコーディングを致します。
+      <br>
+      シンプルながら奥深いコーディングの世界、経験を積むことで
+      スキルを積み上げていきます。
+      <br>
+      ホームページ更新/運用/保守/ 適切なタグを学ぶことでWebサイトをユーザーに見やすく致します。
+    </p>
+  </div>
+</div>
+<!----------------------------------
+ Ls-test07-sec03 バナー2枚
+------------------------------------>
+<div class="Ls-test07-sec03">
+  <div class="Ls-test07-sec03__container">
+    <div class="Ls-test07-sec03__table_left_up">
+      <h2>
+				バナー作成
+			</h2>
+        <p>
+					Barnner
+				</p>
+        <img src="./image/info_g04.png">
+        <p class="Ls-test07-sec03__text">
+          ユーザーの記憶に残る。
+          <br>
+          脳みそに見せるバナー作りにこだわります。
+        </p>
+		<div class="Ls-test07-sec03__button">
+				<div class="Ls-test07-sec03__btn">
+					<a href="" style="color:#fff; text-decoration:none;">
+						詳しくはこちら
+					</a>
+				</div>
+		</div>
+  </div>
+
+<!----------------------------------
+  Ls-test07-sec03__table_left_up
+------------------------------------>
+<div class="Ls-test07-sec03__table_left_up">
+	<h2>
+		LP作成
+	</h2>
+		<p>
+			Landing Page
+		</p>
+		<div class="right:image;">
+			<img src="./image/info_g04.png" >
+		</div>
+		<p>
+			制作に没頭した集中力で。
+		<br>
+			物腰柔らかく一丸となり業務に取り組みます。
+		</p>
+		<div class="Ls-test07-sec03__text">
+			<div class="Ls-test07-sec03__btn">
+				<a href="" >
+					詳しくはこちら
+				</a>
+			</div>
+		</div>
+		</div>
+	</div>
+</diV>
+<!----------------------------------
+  sec05_wrapper
+------------------------------------>
+<div class="sec05_wrapper" style="margin:0 auto; width:100vw; width:100%;  background-color:#f6f6f6; ">
+  <div class="sec05_inner"
+    style="height:auto; max-width:1200px; width:100%; margin:60px auto; padding-right:30px; padding-bottom:60px;">
+    <div>
+      <h2
+        style="font-family:メイリオ,sans-serif,Meiryo; font-weight:100; padding-top:60px; padding-left:30px; font-size: 30px;">
+        One day Work Flow
+        <span style="font-size:17px;">（日進月歩）</span>
+      </h2>
+    </div>
+    <p style="padding-left:30px;">Product manual （How to use）</p>
+    <div class="" style="margin: 0 auto;  text-align:center; padding-left:30px;">
+      <ul class="sec05_container"
+        style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:center; list-style:none;padding-right:10px;">
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+        <li class="sec05image_card">
+          <img src="./image/earphone guide.png" width="65px">
+        </li>
+      </ul>
+    </div>
+    <div class="btn_position" style="text-align:center; margin:0 auto;">
+      <div class="sec05_btn" style="background-color:yellow; border-radius:10px; background-color:#ffa200;
+                color: #ffffff;
+                padding:10px 50px;
+                font-style: bold;
+                border: 0px solid #000;
+                border-radius:10px;
+                margin:0 auto;
+                width:300px;
+                margin-top:10px;
+                margin-bottom:20px;
+                text-decoration: none;
+                filter: drop-shadow(0 1mm 1mm rgb(128, 128, 128));">
+        <a href="" style="color:#fff; text-decoration:none;">
+          お問合せはこちら
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------
+  Ls-test07-sec04 お知らせ・ニュース
+------------------------------------>
+<div class="Ls-test07-sec04">
+  <div class="Ls-test07-sec04__inner" style="padding:60px 30px 0px 30px;  ">
+    <h2>
+      お知らせ・ニュース
+    </h2>
+    <div class="Ls-test07-sec04__card_hi" style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;">
+      <div class="Ls-test07-sec04__card_left">
+        <div class="Ls-test07-sec04__card_left_title">
+          <P>Information ＆ NEWS release</P>
+        </div>
+      </div>
+      <div class="Ls-test07-sec04__card_right" style="text-align:right;
+        width:100%; max-width:20%;">
+          <button class="btnbtnbtn">
+            <a href="" style="text-decoration:none;">
+              一覧はこちら
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="Ls-test07-sec04__card_left" style="width:100%; max-width:100%;">
+        <div class="Ls-test07-sec04__card_row">
+          <br>
+            <ul class="Ls-test07-sec04__card_row__newsList" style="align-items: center;">
+              <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.08.30</li>
+              <li class="" style="border-radius:20px; text-align:left;">お知らせ</li>
+                <li>
+                  <p style="font-size:13px; color:black;text-align:left;">
+                    <a href="#" style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum inventore qui, sunt ea provident laborum ducimus soluta quos beatae eligendi ipsum architecto doloribus est laudantium odit accusantium exercitationem et in.</a>
+                  </p>
+              </li>
+            </ul>
+            <ul class="newsList" style="align-items: left;">
+              <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.08.02</li>
+              <li class="Ls-test07-sec04__card_row__newsList_title" style="border-radius:20px;text-align:left;">お知らせ</li>
+              <li>
+                <p style="font-size:13px; color:black;">
+                  <a href="#" style="color:black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil culpa doloremque minus provident, natus animi illum similique necessitatibus fugiat porro alias debitis eos libero, itaque neque enim inventore asperiores! Doloribus?</a>
+                </p>
+              </li>
+            </ul>
+            <ul class="newsList" style="align-items: left;">
+              <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.07.01</li>
+              <li style="border-radius:20px;text-align:left;">お知らせ</li>
+                <li>
+                  <p style="font-size:13px; color:black;">
+                    <a href="#" style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloribus eius animi vel provident recusandae officiis fuga quis aspernatur perspiciatis. Ullam eaque distinctio dolores reiciendis sunt earum at consectetur amet!</a>
+                  </p>
+              </li>
+            </ul>
+            <ul class="newsList" style="align-items: left;">
+              <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.06.24</li>
+              <li style="border-radius:20px;text-align:left;">ニュースリリース</li>
+              <li>
+                <p style="font-size:13px;">
+                  <a href="#" style="color:black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, temporibus, nulla non, amet neque tempora rem nihil fuga exercitationem repellat magni harum. Possimus, minus debitis ad distinctio fuga praesentium illum.</a>
+                </p>
+              </li>
+            </ul>
+        <ul class="newsList" style="align-items: left;">
+          <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.03.08</li>
+          <li style="border-radius:20px;text-align:left;">お知らせ</li>
+          <li>
+            <p style="font-size:13px; color:black;">
+              <a href="#" style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas voluptatum tempore molestiae tempora saepe aperiam vero repellendus similique facere odit sunt perferendis ipsum eos nobis, alias sint earum omnis.</a>
+            </p>
+          </li>
+        </ul>
+        <ul class="newsList" style="align-items: left;">
+          <li class="Ls-test07-sec04__card_row__newsList_title" style="text-align:left">2022.02.07</li>
+          <li style="border-radius:20px;text-align:left;">ニュースリリース</li>
+          <li>
+            <p style="font-size:13px; color:black;">
+              <a href="#" style="color:black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, in. Odit expedita culpa, sapiente similique tempore numquam qui reprehenderit praesentium iusto rem voluptatibus quibusdam harum corporis iste itaque nam facilis?</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------
+  sec05_wrapper 採用事例
+------------------------------------>
+<div class="sec05_wrapper">
+  <div class="sec05_inner">
+    <!-- <div id="map"></div>
+    <div class="map" id="map"></div>
+  </div> -->
+</div>
+<!----------------------------------
+  Ls-footer フッター
+------------------------------------>
+<div class="Ls-footer">
+  <div class="Ls-footer__inner">
+    <div class="Ls-footer__left_column">
+      <img src="./image/header_logo.png">
+        <p class="Ls-footer__company-name">
+          L-sunsui co.,ltd
+        </p>
+        <p class="Ls-footer__address">
+            〒000-0000 神奈川県海老名市4丁目5番16号6階
+          <br>
+            [ TEL ]03-0000-0000 [ FAX ]03-0000-0000
+          <br>
+            [ 営業時間 ] 月～金（祝日除く）9:00～18:00
+          </p>
+      </div>
+
+      <div class="Ls-footer__right_column">
+        <div class="Ls-footer___right_column_info">
+            <p>
+            L-sunsuiについて
+            <br>
+            お気軽にご相談・ご質問ください
+            </p>
+        </div>
+        <div class="Ls-footer__btn">
+						各種ご相談・お問合せ
+				</div>
+          <p>
+            [ よくあるご質問はこちら ]
+          </p>
+      </div>
+  </div>
+      <div>
+        <p class="Ls-footer__footer_text">
+          当サイト上に掲載されている®の商品またはサービスの名称などはの登録商標です。
+          その他、本サイトに記載されている商品・サービス名は、各社の商標または登録商標です。
+        </p>
+      </div>
+
+<!-- <div class="Ls-footer_footer_title"> -->
+      <div class="Ls-footer__gnavi__wrap" id="g-nav-list">
+        <ul class="Ls-footer__gnavi__lists" id="normal">
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> TOP</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> 会社概要</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> 個人情報保護</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> 当サイトについて</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> Q＆A</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> ユーザーサポート</a>
+          </li>
+          <li class="Ls-footer__gnavi__list">
+            <a href="#"> サイトマップ</a>
+          </li>
+        </ul>
+        <small>
+          <p class="Ls-footer__footer_text_low">© L-sunsui CO., LTD.</p>
+        </small>
+      </div>
+  </div>
+</div>
+  <p id="page-top"><a href="#">Page Top</a></p>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFLBw8HfCJo=" crossopigin="anonymous"></script>
+
+<script src="./js/main.js"></script>
+<script src="./js/5-2-1.js"></script>
+<script src="./js/8-1-2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- <script src="./js/iss.js"></script> -->
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<!-- <script src="./js/make-map.js"></script> -->
+<script src="./js/hamburger.js"></script>
+</body>
+</html>

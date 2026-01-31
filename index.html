@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="./css/normarize.css">
   <link rel="stylesheet" href="./css/8-1-2.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" media="all">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="./js/layout.js">
+  <link rel="stylesheet" type="text/css" href="cdn.jsdeliver.net/...">
   <link rel="stylesheet" type="text/css" href="css/6-1-1.css">
   <link rel="stylesheet" type="text/css" href="cdn.jsdeliver.net/npm/slick-carousel@1.8.1/slick/
   slick.css">
@@ -26,112 +25,136 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 </head>
 <body>
-<!----------------------------------
-Ls-top__header
------------------------------------->
-<div class="Ls-top__header">
-  <div class="Ls-top__header-flex">
-    <h1 style="vertical-align: top;">
-      <img src="./image/header_logo.png" alt="">
-    </h1>
-<!-- <nav id="g-navi"> -->
-				<nav>
-					<ul class="Ls-header__gnavi__lists" id="normal">
-						<li class="Ls-header__gnavi__list">
-							<a href="#">
-								<i class="far fa-list-alt fa-lg"></i>
-									TOPページ
-							</a>
-						</li>
-						<li class="Ls-header__gnavi__list">
-							<a href="#">
-								<i class="far fa-list-alt fa-lg"></i>
-									お知らせ
-							</a>
-						</li>
-						<li class="Ls-header__gnavi__list">
-							<a href="#">
-								<i class="far fa-list-alt fa-lg"></i>
-									ご利用シーン・事例
-							</a>
-						</li>
-					</ul>
-				</nav><!-- </nav> -->
-    <!-- <div class="openbtn1">
-			<a class="trigger" href="#">
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
-    </div> -->
-        <div id="navArea">
-          <nav>
-            <div class="inner">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Detail</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
+<!-- =========================
+Header
+========================= -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-logo" href="#">
+      <img src="./image/header_logo.png" alt="TOKYOMETRO">
+    </a>
 
-          <div class="toggle-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- PC用ナビ -->
+    <nav class="pc-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#top">TOPページ</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#cases">ご利用シーン・事例</a></li>
+      </ul>
+    </nav>
+
+    <!-- ハンバーガー（モバイル用） -->
+    <button class="burger" type="button" aria-controls="sp-nav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- SP用スライドメニュー -->
+  <nav id="sp-nav" class="sp-nav" aria-label="Mobile">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#cases">Detail</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="mask" hidden></div>
+</header>
+
+<!-- =========================
+Main（ヘッダーの外！）
+========================= -->
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <h2 class="hero-title">L-sunsui</h2>
+        <p class="hero-sub">Portfolio / New LP / Tokyo Metro / LofiApp / Works</p>
+      </div>
+
+      <div class="media">
+        <img src="./image/HERO.png" alt="">
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Featured -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <h2 class="h2">Featured</h2>
+      <p class="lead">見せるのは3つだけ。あとはArchiveへ。</p>
+
+      <div class="grid grid-3" style="margin-top:24px;">
+        <article class="card">
+          <div class="media cover">
+            <img src="./image/cover.jpg" alt="">
           </div>
+          <h3 class="card-title">New LP</h3>
+          <p class="card-meta">HTML/CSS / Responsive</p>
+        </article>
 
-          <div id="mask"></div>
-        </div>
+        <article class="card">
+          <div class="media cover">
+            <img src="./image/cover2.jpg" alt="">
+          </div>
+          <h3 class="card-title">Tokyo Metro</h3>
+          <p class="card-meta">JS / UI</p>
+        </article>
 
-        <main>
-          <h1>Hamburger Menu Youtube</h1>
-        </main>
-	</div>
-</div>
-<!----------------------------------
-  container ヒーローイメージ
------------------------------------->
-<div class="container">
-  <div class="container__inner slider"  >
-    <img src="./image/HERO.png">
-  </div>
-</div>
+        <article class="card">
+          <div class="media cover">
+            <img src="./image/cover3.jpg" alt="">
+          </div>
+          <h3 class="card-title">LofiApp</h3>
+          <p class="card-meta">React (demo)</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<!----------------------------------
-  contact ヒーローイメージ
------------------------------------->
-<div class="contact">
-  <div class="contact_inner">
-    <div id="map" style="width: 800px; height: 400px"></div>
-  </div>
-</div>
+  <!-- ↓ ここにこの後、NewsやFooterを入れていく -->
+</main>
 
 <!----------------------------------
 Ls-test07-sec02 バナー3枚
 ------------------------------------>
-<div class="Ls-test07-sec02">
-  <div class="Ls-test07-sec02__inner">
-    <div class="card1">
-      <img src="./image/info_g05.png" >
-        <p class="card_text" >
-          HTML5
-				</p>
-    </div>
-    <div class="card2">
-      <img src="./image/info_g05.png">
-        <p class="card_text">
-          CSS3
-				</p>
-    </div>
-    <div class="card3">
-      <img src="./image/info_g05.png">
-        <p class="card_text">
-          jQuery
-				</p>
+<section class="section section--tight">
+  <div class="wrap">
+    <h2 class="h2">Featured</h2>
+    <p class="lead">見せるのは3つだけ。あとはArchiveへ。</p>
+
+    <div class="grid grid-3" style="margin-top:24px;">
+      <article class="card">
+        <div class="media cover">
+          <img src="./image/cover1.jpg" alt="">
+        </div>
+        <h3 class="card-title">New LP</h3>
+        <p class="card-meta">HTML/CSS / Responsive</p>
+      </article>
+
+      <article class="card">
+        <div class="media cover">
+          <img src="./image/cover2.jpg" alt="">
+        </div>
+        <h3 class="card-title">Tokyo Metro</h3>
+        <p class="card-meta">JS / UI</p>
+      </article>
+
+      <article class="card">
+        <div class="media cover">
+          <img src="./image/cover3.jpg" alt="">
+        </div>
+        <h3 class="card-title">LofiApp</h3>
+        <p class="card-meta">React (demo)</p>
+      </article>
     </div>
   </div>
-</div>
+</section>
 
 <!----------------------------------
   container3 デザイナーが起こした

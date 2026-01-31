@@ -9,7 +9,7 @@
 
 body{
   background:#f3f3f3;
-  padding:20px;
+  padding:10px;
 }
 
 a{
@@ -37,21 +37,32 @@ h1>img {
   width:200px;
   padding: 30px;
 }
+:root {
+  --container: 1120px;
+  --px: 24px;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
 /*-------------------------
 .Ls-top__header ヘッダー
 ---------------------------*/
 .Ls-top__header {
   max-width: 100%;
   width:1200px;
-  display: grid;
+  /* display: grid; */
 	margin:0 auto;
 }
 
 .Ls-top__header-flex {
   display: flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  padding: 0px 30px 10px 30px;
+  /* flex-wrap:wrap; */
+  /* justify-content:space-between; */
+  padding: 8px 16px ;
+  min-height:56px;
 }
 
 .far fa-envelope {
@@ -89,12 +100,13 @@ h1>img {
   height: 100%;
   text-decoration: none;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "serif";
   letter-spacing: 0.05em;
+  line-height:1.2;
   font-weight: 400;
-  width: 100%;
-  width: 160px;
+  width: 140px;
+  padding:6px 0;
   margin: 0 auto;
   cursor: pointer;
   align-items: center;
@@ -235,6 +247,7 @@ main h1 {
 
 .Ls-top__header .toggle-btn span {
   position: absolute;
+  height:2px;
   display: block;
   left: 0;
   width: 30px;
@@ -742,6 +755,59 @@ Ls-footer フッター
   right:0;
 }
 
+/* =========================
+  Modern Header (shadcn風)
+  ========================= */
+
+.Ls-top__header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+/* 中央寄せの器 */
+.Ls-top__header-flex {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ロゴを小さく・軽く */
+.Ls-top__header-flex h1,
+.Ls-top__header-flex img {
+  max-height: 32px;
+}
+
+/* ナビ（PC） */
+.Ls-top__header-flex nav ul {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ナビリンク */
+.Ls-header__gnavi__list a {
+  width: auto;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ハンバーガーをヘッダー内に */
+.Ls-top__header .toggle-btn {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
 @media screen and (max-width: 768px) {
   .Ls-top__header-flex nav ul{
       display: none;
@@ -774,4 +840,328 @@ Ls-footer フッター
     width:100%;
   }
 
+}
+:root {
+  --container: 1120px;
+  --px: 24px;
+  --header-h: 56px;
+}
+
+/* 中央寄せの器 */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+
+/* ヘッダー */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.header-inner {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ロゴ */
+.site-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* PCナビ */
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.nav-list a:hover {
+  opacity: 1;
+}
+
+/* ハンバーガー */
+.burger {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  display: none;
+  /* PCでは隠す */
+  position: relative;
+  cursor: pointer;
+}
+
+.burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: #111;
+  border-radius: 999px;
+  transition: .25s;
+}
+
+.burger span:nth-child(1) {
+  top: 13px;
+}
+
+.burger span:nth-child(2) {
+  top: 19px;
+}
+
+.burger span:nth-child(3) {
+  top: 25px;
+}
+
+/* SPメニュー */
+.sp-nav {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #eee;
+  padding: 80px 20px 20px;
+  transition: .25s;
+  z-index: 120;
+}
+
+.sp-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sp-nav a {
+  display: block;
+  padding: 12px 0;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* マスク */
+.mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 110;
+}
+
+/* 開いた状態（bodyに nav-open を付ける想定） */
+.nav-open .sp-nav {
+  right: 0;
+}
+
+.nav-open .mask {
+  display: block;
+}
+
+.nav-open .burger span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-open .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .burger span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .pc-nav {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+}
+/* =========================
+  Ninthwonder-ish layout patch
+  ========================= */
+:root {
+  --container: 1120px;
+  --px: 24px;
+  --s1: 12px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 48px;
+  --s5: 72px;
+  --s6: 96px;
+}
+
+body {
+  padding: 0;
+  background: #f3f3f3;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* どこでも使う中央寄せの器 */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+
+/* セクションの余白を統一（デカさの原因を消す） */
+.section {
+  padding: var(--s5) 0;
+}
+
+.section--tight {
+  padding: var(--s4) 0;
+}
+
+/* 見出し：デカくしない */
+.h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  margin: 0;
+}
+
+.lead {
+  margin-top: var(--s2);
+  color: rgba(17, 17, 17, .72);
+  font-size: 14px;
+}
+
+/* Hero：余白と文字だけで勝つ */
+.hero {
+  background: transparent;
+}
+
+.hero-inner {
+  display: grid;
+  gap: var(--s4);
+  align-items: center;
+  padding: var(--s6) 0;
+}
+
+.hero-title {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.hero-sub {
+  margin-top: var(--s2);
+  color: rgba(17, 17, 17, .75);
+  font-size: 15px;
+  max-width: 60ch;
+}
+
+/* 画像は揃える：これで一気に“整って見える” */
+.media {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e9e9e9;
+  border: 1px solid #eee;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* グリッド：space-between卒業 */
+.grid {
+  display: grid;
+  gap: var(--s3);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* カード：shadcn風の軽さ（線と余白） */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: var(--s3);
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 650;
+  margin: var(--s2) 0 0;
+}
+
+.card-meta {
+  font-size: 13px;
+  color: rgba(17, 17, 17, .7);
+  margin-top: 6px;
+}
+
+/* 正方形カード画像（ショップ感） */
+.cover {
+  aspect-ratio: 1 / 1;
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    padding: var(--s5) 0;
+  }
+}
+.container3__inner {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Ls-test07-sec02__text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(17, 17, 17, .75);
 }
